@@ -37,9 +37,9 @@ try:
             element.click()
             print(f"Selected element with XPath: {xpath}")
 
-    submit_button = wait.until(EC.presence_of_element_located((By.XPATH, "(//button[normalize-space()='Submit'])[1]")))
-    submit_button.click()
-    print("Form submitted.")
+    # submit_button = wait.until(EC.presence_of_element_located((By.XPATH, "(//button[normalize-space()='Submit'])[1]")))
+    # submit_button.click()
+    # print("Form submitted.")
 
 except Exception as e:
     print(f"An error occurred: {str(e)}")
