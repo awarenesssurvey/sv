@@ -3,6 +3,9 @@ from pytube import YouTube
 import os
 from datetime import datetime
 
+
+video_url = input('Enter video URL: ')
+
 # Function to sanitize a string to be used as a filename
 def sanitize_filename(filename):
     # Replace characters that are not allowed in filenames with underscores

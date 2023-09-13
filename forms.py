@@ -26,8 +26,9 @@ try:
         "//input[@type='radio' and @value='Yes' and @name='rb44b6064fde64d698b9ce6e33f3c89e1']",
         "//input[@type='radio' and @value='Yes, I would be very supportive']",
         "//input[@type='checkbox' and @value='Doctor']",
-        "//input[@type='checkbox' and @value='Exercise']",
-        "//input[@type='radio' and @value='Yes' and @name='r21856a3aeadc4583b092c10317331866']"
+        "//input[@type='checkbox' and @value='Exercise']"
+        # ,
+        # Exercise"//input[@type='radio' and @value='Yes' and @name='r21856a3aeadc4583b092c10317331866']"
     ]
 
     # Iterate through the XPaths and select the elements
@@ -35,7 +36,9 @@ try:
         element = wait.until(EC.presence_of_element_located((By.XPATH, xpath)))
         if not element.is_selected():
             element.click()
+            WebDriverWait(driver, 10)
             print(f"Selected element with XPath: {xpath}")
+
 
     # submit_button = wait.until(EC.presence_of_element_located((By.XPATH, "(//button[normalize-space()='Submit'])[1]")))
     # submit_button.click()
