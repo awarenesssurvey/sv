@@ -29,6 +29,13 @@ def get_transcript(video_url):
         # Generate a timestamp
         timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
 
+        folder_path = "/Users/developer1/Google Drive/My Drive/Transcript"
+
+        # Check if the folder exists, and create it if it doesn't
+        if not os.path.exists(folder_path):
+            os.makedirs(folder_path)
+            print(f"Folder '{folder_path}' created successfully.")
+
         google_drive_path = f"/Users/developer1/Google Drive/My Drive/Transcript"
 
         # Save the transcript to a text file with sanitized video title and timestamp as the file name
