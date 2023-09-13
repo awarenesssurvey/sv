@@ -20,11 +20,7 @@ def get_transcript(video_url):
         yt = YouTube(video_url)
         video_title = yt.title
         #
-        # # Create the "Transcript" directory if it doesn't exist
-        # if not os.path.exists("Transcript"):
-        #     os.makedirs("Transcript")
 
-        # Sanitize the video title for use as a filename
         sanitized_title = sanitize_filename(video_title)
 
         # Get the transcript
