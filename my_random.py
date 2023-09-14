@@ -14,7 +14,12 @@ q9_pcos_support_responses = parameters.q9_pcos_support_responses
 q10_treatment_sources = parameters.q10_information_sources
 q11_treatment_options = parameters.q11_treatment_options
 q12_survey_responses = parameters.q12_survey_responses
+
 # Function to randomly select parameters
+
+
+# q = q1_gender, q2_grade, q3_age_group, q4_ethnicity, q5_heard_of, q6_knowledge_level, q7_symptom, q8_pcos_symptom, q9_pcos_support_response, q10_treatment_option, q11_treatment_option, q12_survey_response
+
 def random_selection():
     q1_gender = random.choice(q1_gender_list)
     q2_grade = random.choice(q2_grades_list)
@@ -28,12 +33,13 @@ def random_selection():
     q10_treatment_option = random.choice(q10_treatment_sources)
     q11_treatment_option = random.choice(q11_treatment_options)
     q12_survey_response = random.choice(q12_survey_responses)
-    # ... (repeat for other lists as needed)
 
-    # Perform some action with the selected parameters
     print(f"{q1_gender}::{q2_grade}::{q3_age_group}::{q4_ethnicity}::{q5_heard_of}::{q6_knowledge_level}::{q7_symptom}::{q8_pcos_symptom}::{q9_pcos_support_response}::{q10_treatment_option}::{q11_treatment_option}::{q12_survey_response}")
-    # You can perform any action you need with these randomly selected parameters
 
 # Repeat the random selection 1000 times
-for _ in range(10):
-    random_selection()
+for _ in range(20):
+    q1_gender = random.choice(q1_gender_list)
+    q2_grade = random.choice(q2_grades_list)
+    q3_age_group = random.choice(q3_age_groups)
+    print(q1_gender, q2_grade, q3_age_group)
+

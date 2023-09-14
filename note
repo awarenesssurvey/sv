@@ -1,5 +1,6 @@
 Folder Permission
 
 # sudo chown -R developer1 "/Users/developer1/Google Drive/My Drive/Transcript"
+# sudo chown -R developer1 "/Users/thatcha/Google Drive/My Drive/Transcript"
 
 # find . | grep -E "(/__pycache__$|\.pyc$|\.pyo$)" | xargs rm -rf
